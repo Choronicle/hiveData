@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:clickhouse://localhost:8123/dm
+    username: default
+    password:
+    driver-class-name: ru.yandex.clickhouse.ClickHouseDriver
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    auto-mapping-behavior: full
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+  mapper-locations: classpath*:com/**/mapper/*.xml
+server:
+  address: 0.0.0.0
